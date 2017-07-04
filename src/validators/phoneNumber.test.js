@@ -2,7 +2,7 @@ import Validator from "./phoneNumber";
 
 describe("PhoneNumberValidator", () => {
   describe("on empty input", () => {
-    it("should return not correct", () => {
+    it("should return error", () => {
       const result = Validator("");
 
       expect(result).toEqual("It's not correct");
@@ -13,7 +13,7 @@ describe("PhoneNumberValidator", () => {
     it("should return correct", () => {
       const result = Validator("647-555-1212");
 
-      expect(result).toEqual("Correct Toronto number");
+      expect(result).toEqual("Correct 10-digit number");
     });
   });
 
@@ -21,7 +21,7 @@ describe("PhoneNumberValidator", () => {
     it("should return correct", () => {
       const result = Validator("647 555 1212");
 
-      expect(result).toEqual("Correct Toronto number");
+      expect(result).toEqual("Correct 10-digit number");
     });
   });
 
