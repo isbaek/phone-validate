@@ -1,6 +1,6 @@
 import Validator from "./phoneNumber";
 
-describe("PhoneNumberValidator", () => {
+describe("Validator", () => {
   describe("on empty input", () => {
     it("should return error", () => {
       const result = Validator("");
