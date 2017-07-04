@@ -1,4 +1,4 @@
-import Validator from "./phoneNumber";
+import Validator from "./Validator";
 
 describe("Validator", () => {
   describe("on empty input", () => {
