@@ -1,0 +1,10 @@
+.Grid {
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+}
+
+.Grid-cell {
+  flex: 1;
+  flex-basis: calc(100% / 3);
+}
