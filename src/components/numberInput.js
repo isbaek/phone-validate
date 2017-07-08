@@ -16,6 +16,7 @@ class numberInput extends Component {
   }
 
   // validate whether user inputed data is correct or false
+  // call args this and this.state.value when it validates
   validate() {
     if (this.props.validate) {
       const validation = this.props.validate.call(this, this.state.value);
@@ -42,7 +43,7 @@ class numberInput extends Component {
       <div>
         <input
           type="text"
-          className="ft-input"
+          className="num-input"
           value={this.props.value}
           onBlur={this.validate}
           onChange={this.change}
