@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 // Input field
-class numberInput extends Component {
+class PhoneNumberInput extends Component {
   constructor(props) {
     super(props);
 
@@ -55,4 +55,4 @@ class numberInput extends Component {
   }
 }
 
-export default numberInput;
+export default PhoneNumberInput;

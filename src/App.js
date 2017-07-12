@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import NumberPad from "./components/NumberPad";
-import NumberInput from "./components/NumberInput";
+import PhoneNumberInput from "./components/PhoneNumberInput";
 import Validator from "./validators/Validator";
 
 class App extends Component {
@@ -36,7 +36,7 @@ class App extends Component {
       <div className="App">
 
         <NumberPad />
-        <NumberInput
+        <PhoneNumberInput
           value={this.state.phoneNumber}
           onChange={this.change}
           validate={this.validate}
