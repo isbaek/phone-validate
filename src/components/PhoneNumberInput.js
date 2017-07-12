@@ -48,8 +48,10 @@ class PhoneNumberInput extends Component {
           onBlur={this.validate}
           onChange={this.change}
         />
-        {this.state.validation &&
-          <div className={"error"}>{this.state.validation}</div>}
+        {console.log(
+          this.state.validation &&
+            <div className={"error"}>{this.state.validation}</div>
+        )}
       </div>
     );
   }

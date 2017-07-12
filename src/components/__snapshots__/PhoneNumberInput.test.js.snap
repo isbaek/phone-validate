@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PhoneNumberInput has no props renders like it did last summer 1`] = `
+<div>
+  <input
+    className="num-input"
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="text"
+    value={undefined}
+  />
+</div>
+`;

@@ -4,16 +4,19 @@
 .Grid {
   background-color: #553D7B;
   margin: auto;
-  width: 400px;
+  width: 350px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 60px;
 }
 
 .Grid-cell {
   width: calc(100% / 3);
   display: inline-block;
-  margin-bottom: 60px;
+}
+
+p {
+  padding: px;
   font-size: 20px;
   font-family: 'Hind', sans-serif;
+  color: white;
 }

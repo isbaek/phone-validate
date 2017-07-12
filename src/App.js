@@ -36,14 +36,12 @@ class App extends Component {
     return (
       <div className="App">
         <Title />
-        <NumberPad />
         <PhoneNumberInput
           value={this.state.phoneNumber}
           onChange={this.change}
           validate={this.validate}
         />
-
-        <pre id="valid">valid = {JSON.stringify(this.state.valid)}</pre>
+        <NumberPad />
       </div>
     );
   }
