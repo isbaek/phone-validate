@@ -5,6 +5,7 @@ import "./App.css";
 import NumberPad from "./components/NumberPad";
 import PhoneNumberInput from "./components/PhoneNumberInput";
 import Validator from "./validators/Validator";
+import Title from "./components/Title";
 
 class App extends Component {
   constructor(props) {
@@ -34,7 +35,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
+        <Title />
         <NumberPad />
         <PhoneNumberInput
           value={this.state.phoneNumber}

@@ -1,3 +1,5 @@
+/* fonts from Google */
+@import url('https://fonts.googleapis.com/css?family=Hind');
 
 .Grid {
   background-color: #553D7B;
@@ -12,4 +14,6 @@
   width: calc(100% / 3);
   display: inline-block;
   margin-bottom: 60px;
+  font-size: 20px;
+  font-family: 'Hind', sans-serif;
 }

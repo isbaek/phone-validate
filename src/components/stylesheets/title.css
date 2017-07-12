@@ -1,0 +1,10 @@
+/* fonts from Google */
+@import url('https://fonts.googleapis.com/css?family=Hind:400,600');
+
+h1 {
+  font-family: 'Hind', sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: white;
+
+}
