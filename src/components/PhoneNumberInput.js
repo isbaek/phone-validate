@@ -13,6 +13,8 @@ class PhoneNumberInput extends Component {
       validation: "Correct 10-digit number",
       value: props.value
     };
+
+    this.change = this.change.bind(this);
   }
 
   // validate whether user inputed data is correct or false
