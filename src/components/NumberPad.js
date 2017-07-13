@@ -1,26 +1,25 @@
 import React, { Component } from "react";
-import Button from "./Button";
+
 import "./stylesheets/numberpad.css";
+
+function Button(props) {
+  return <button id={props.id} {...props} />;
+}
 
 class NumberPad extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      display: ""
+      display: props.display
     };
 
-    this.change = this.change.bind(this);
     this._handleClick = this._handleClick.bind(this);
-  }
-
-  change({ target: { value } }) {
-    this.setState({ number: value });
   }
 
   // when button pressed, display the digit on the input field
   _handleClick(digit) {
-    const { display } = this.state;
+    const { display } = this.props;
     this.setState({
       // if display is empty, put digit or what is displayed + digit
       display: display === "" ? String(digit) : display + digit
