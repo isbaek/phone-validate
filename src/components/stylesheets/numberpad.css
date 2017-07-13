@@ -5,18 +5,30 @@
   background-color: #553D7B;
   margin: auto;
   width: 350px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
+
 }
 
 .Grid-cell {
-  width: calc(100% / 3);
+  width: calc(90% / 3);
+  border: none;
+  background-color: #553D7B;
   display: inline-block;
-}
-
-p {
-  padding: px;
+  padding: 20px;
+  margin: 5px;
   font-size: 20px;
   font-family: 'Hind', sans-serif;
   color: white;
+}
+
+.Grid-cell:focus {
+  outline: 0;
+}
+
+.Grid-cell:active {
+  background-color: #7151A4;
+}
+
+.Grid-cell:hover {
+  background-color: #7151A4;
 }

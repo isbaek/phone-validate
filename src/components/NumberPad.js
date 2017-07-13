@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import "./stylesheets/numberpad.css";
 
 function Button(props) {
-  return <button id={props.id} {...props} />;
+  return <button className="Grid-cell" id={props.id} {...props} />;
 }
 
 class NumberPad extends Component {
@@ -29,76 +29,34 @@ class NumberPad extends Component {
   render() {
     return (
       <div className="Grid">
-        <input type="text" value={this.state.display} onChange={this.change} />
-        <Button
-          className="Grid-cell"
-          id="1"
-          onClick={() => this._handleClick(1)}
-        >
+        <Button id="1" onClick={() => this._handleClick(1)}>
           1
         </Button>
-        <Button
-          className="Grid-cell"
-          id="2"
-          onClick={() => this._handleClick(2)}
-        >
+        <Button id="2" onClick={() => this._handleClick(2)}>
           2
         </Button>
-        <Button
-          className="Grid-cell"
-          id="3"
-          onClick={() => this._handleClick(3)}
-        >
+        <Button id="3" onClick={() => this._handleClick(3)}>
           3
         </Button>
-        <Button
-          className="Grid-cell"
-          id="4"
-          onClick={() => this._handleClick(4)}
-        >
+        <Button id="4" onClick={() => this._handleClick(4)}>
           4
         </Button>
-        <Button
-          className="Grid-cell"
-          id="5"
-          onClick={() => this._handleClick(5)}
-        >
+        <Button id="5" onClick={() => this._handleClick(5)}>
           5
         </Button>
-        <Button
-          className="Grid-cell"
-          id="6"
-          onClick={() => this._handleClick(6)}
-        >
+        <Button id="6" onClick={() => this._handleClick(6)}>
           6
         </Button>
-        <Button
-          className="Grid-cell"
-          id="7"
-          onClick={() => this._handleClick(7)}
-        >
+        <Button id="7" onClick={() => this._handleClick(7)}>
           7
         </Button>
-        <Button
-          className="Grid-cell"
-          id="8"
-          onClick={() => this._handleClick(8)}
-        >
+        <Button id="8" onClick={() => this._handleClick(8)}>
           8
         </Button>
-        v
-        <Button
-          className="Grid-cell"
-          id="9"
-          onClick={() => this._handleClick(9)}
-        >
+        <Button id="9" onClick={() => this._handleClick(9)}>
           9
         </Button>
-        <Button
-          className="Grid-cell"
-          id="0"
-          onClick={() => this._handleClick(0)}
-        >
+        <Button id="0" onClick={() => this._handleClick(0)}>
           0
         </Button>
       </div>
