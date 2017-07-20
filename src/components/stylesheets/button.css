@@ -29,3 +29,22 @@ button:focus {
 button:active {
   background-color: #7151A4;
 }
+
+.delete-button {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  border: 1px solid #F34235;
+  background-color: #F34235;
+  padding: 20px;
+  margin: 10px;
+  font-size: 20px;
+  font-family: 'Hind', sans-serif;
+  color: white;
+  text-align: center;
+  transition: background-color 0.2s ease-out;
+}
+
+.delete-button:active {
+  background-color: rgba(243, 66, 53, 0.3);
+}

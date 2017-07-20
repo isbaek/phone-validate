@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import Button from "./Button";
+import { Button, DeleteButton } from "./Button";
 import PhoneNumberInput from "./PhoneNumberInput";
 import Validator from "../validators/Validator";
+
+import DeleteIcon from "react-icons/lib/fa/angle-left";
 
 import "./stylesheets/button.css";
 
@@ -77,6 +79,9 @@ class NumberPad extends Component {
           <Button id="9" onClick={() => this.handleClick(9)}>
             9
           </Button>
+          <DeleteButton id="9">
+            <DeleteIcon />
+          </DeleteButton>
           <Button id="0" onClick={() => this.handleClick(0)}>
             0
           </Button>
