@@ -1,0 +1,26 @@
+/* fonts from Google */
+@import url('https://fonts.googleapis.com/css?family=Hind');
+
+.Grid-cell {
+  width: calc(90% / 3);
+  border: none;
+  background-color: #553D7B;
+  display: inline-block;
+  padding: 20px;
+  margin: 5px;
+  font-size: 20px;
+  font-family: 'Hind', sans-serif;
+  color: white;
+}
+
+.Grid-cell:focus {
+  outline: 0;
+}
+
+.Grid-cell:active {
+  background-color: #7151A4;
+}
+
+.Grid-cell:hover {
+  background-color: #7151A4;
+}
