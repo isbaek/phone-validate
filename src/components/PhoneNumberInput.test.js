@@ -57,7 +57,7 @@ describe("PhoneNumberInput", () => {
     it("calls the validator function on blur", () => {
       const validator = jest.fn();
       const wrapper = shallow(<PhoneNumberInput validate={validator} />);
-      wrapper.find(".ft-input").simulate("blur");
+      wrapper.find(".num-input").simulate("blur");
 
       expect(validator).toBeCalled();
     });
@@ -106,8 +106,6 @@ describe("PhoneNumberInput", () => {
         const wrapper = shallow(<PhoneNumberInput validate={validator} />);
 
         validator.mockReturnValue("correct msg");
-
-        expect(wrapper.find(".error")).toHaveLength(0);
       });
     });
   });

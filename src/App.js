@@ -13,7 +13,8 @@ class App extends Component {
 
     this.state = {
       valid: "Correct 10-digit number",
-      phoneNumber: ""
+      phoneNumber: "",
+      display: ""
     };
 
     this.validate = this.validate.bind(this);

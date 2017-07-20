@@ -13,8 +13,6 @@ class PhoneNumberInput extends Component {
       validation: "Correct 10-digit number",
       value: props.value
     };
-
-    this.change = this.change.bind(this);
   }
 
   // validate whether user inputed data is correct or false
@@ -50,10 +48,8 @@ class PhoneNumberInput extends Component {
           onBlur={this.validate}
           onChange={this.change}
         />
-        {console.log(
-          this.state.validation &&
-            <div className={"error"}>{this.state.validation}</div>
-        )}
+        {this.state.validation &&
+          <div className={"error"}>{this.state.validation}</div>}
       </div>
     );
   }

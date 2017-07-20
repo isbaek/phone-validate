@@ -11,53 +11,65 @@ class NumberPad extends Component {
     super(props);
 
     this.state = {
-      display: props.display
+      value: props.value
     };
 
-    this._handleClick = this._handleClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  // when button pressed, display the digit on the input field
-  _handleClick(digit) {
-    const { display } = this.props;
-    this.setState({
-      // if display is empty, put digit or what is displayed + digit
-      display: display === "" ? String(digit) : display + digit
-    });
+  // when button pressed, value the digit on the input field
+  handleClick(digit) {
+    if (this.props.handleClick) {
+      const value = this.props.handleClick.call(this, this.state.value);
+      this.setState({
+        // if value is empty, put digit or what is valued + digit
+        value: value === "" ? String(digit) : value + digit
+      });
+    }
+  }
+
+  componentWillReceiveProps({ value }) {
+    this.setState({ value: value });
   }
 
   render() {
     return (
       <div className="Grid">
-        <Button id="1" onClick={() => this._handleClick(1)}>
+        <Button id="1" onClick={() => this.handleClick(1)}>
           1
         </Button>
-        <Button id="2" onClick={() => this._handleClick(2)}>
+        <Button id="2" onClick={() => this.handleClick(2)}>
           2
         </Button>
-        <Button id="3" onClick={() => this._handleClick(3)}>
+        <Button id="3" onClick={() => this.handleClick(3)}>
           3
         </Button>
-        <Button id="4" onClick={() => this._handleClick(4)}>
+        <Button id="4" onClick={() => this.handleClick(4)}>
           4
         </Button>
-        <Button id="5" onClick={() => this._handleClick(5)}>
+        <Button id="5" onClick={() => this.handleClick(5)}>
           5
         </Button>
-        <Button id="6" onClick={() => this._handleClick(6)}>
+        <Button id="6" onClick={() => this.handleClick(6)}>
           6
         </Button>
-        <Button id="7" onClick={() => this._handleClick(7)}>
+        <Button id="7" onClick={() => this.handleClick(7)}>
           7
         </Button>
-        <Button id="8" onClick={() => this._handleClick(8)}>
+        <Button id="8" onClick={() => this.handleClick(8)}>
           8
         </Button>
-        <Button id="9" onClick={() => this._handleClick(9)}>
+        <Button id="9" onClick={() => this.handleClick(9)}>
           9
         </Button>
-        <Button id="0" onClick={() => this._handleClick(0)}>
+        <Button id="delete">
+          Delete
+        </Button>
+        <Button id="0" onClick={() => this.handleClick(0)}>
           0
+        </Button>
+        <Button id="enter">
+          Enter
         </Button>
       </div>
     );

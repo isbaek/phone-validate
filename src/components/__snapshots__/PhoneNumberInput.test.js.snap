@@ -9,5 +9,10 @@ exports[`PhoneNumberInput has no props renders like it did last summer 1`] = `
     type="text"
     value={undefined}
   />
+  <div
+    className="error"
+  >
+    Correct 10-digit number
+  </div>
 </div>
 `;
