@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import "./stylesheets/numberpad.css";
 
+import DeleteIcon from "react-icons/lib/fa/chevron-left";
+import ValidateIcon from "react-icons/lib/fa/check";
+
 export class Button extends Component {
   constructor(props) {
     super(props);
@@ -38,7 +41,17 @@ export function DeleteButton(props) {
   return (
     <div className="Grid-cell">
       <button className="delete-button" id={props.id} {...props}>
-        {props.children}
+        <DeleteIcon />
+      </button>
+    </div>
+  );
+}
+
+export function ValidateButton(props) {
+  return (
+    <div className="Grid-cell">
+      <button className="validate-button" id={props.id} {...props}>
+        <ValidateIcon />
       </button>
     </div>
   );

@@ -48,3 +48,22 @@ button:active {
 .delete-button:active {
   background-color: rgba(243, 66, 53, 0.3);
 }
+
+.validate-button {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  border: 1px solid #00C853;
+  background-color: #00C853;
+  padding: 20px;
+  margin: 10px;
+  font-size: 20px;
+  font-family: 'Hind', sans-serif;
+  color: white;
+  text-align: center;
+  transition: background-color 0.2s ease-out;
+}
+
+.validate-button:active {
+  background-color: rgba(0, 200, 83, 0.3);
+}
