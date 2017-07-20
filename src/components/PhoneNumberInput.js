@@ -12,7 +12,7 @@ class PhoneNumberInput extends Component {
 
     //initial state
     this.state = {
-      validation: "Correct 10-digit number",
+      validation: "",
       value: props.value
     };
   }
@@ -52,6 +52,7 @@ class PhoneNumberInput extends Component {
           onBlur={this.validate}
           onChange={this.change}
         />
+
         {this.state.validation &&
           <div className={"error"}>{this.state.validation}</div>}
       </div>
