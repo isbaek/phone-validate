@@ -77,14 +77,8 @@ class NumberPad extends Component {
           <Button id="9" onClick={() => this.handleClick(9)}>
             9
           </Button>
-          <Button id="delete">
-            Delete
-          </Button>
           <Button id="0" onClick={() => this.handleClick(0)}>
             0
-          </Button>
-          <Button id="enter">
-            Enter
           </Button>
         </div>
       </div>

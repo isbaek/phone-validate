@@ -25,13 +25,11 @@ export default class Button extends Component {
 
   render() {
     return (
-      <button
-        className="Grid-cell"
-        id={this.props.id}
-        onClick={() => this.handleClick()}
-      >
-        {this.props.children}
-      </button>
+      <div className="Grid-cell">
+        <button id={this.props.id} onClick={() => this.handleClick()}>
+          {this.props.children}
+        </button>
+      </div>
     );
   }
 }
