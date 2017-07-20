@@ -16,6 +16,7 @@ class NumberPad extends Component {
       valid: "Correct 10-digit number"
     };
 
+    this.handleDelete = this.handleDelete.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.validate = this.validate.bind(this);
     this.change = this.change.bind(this);
@@ -28,6 +29,16 @@ class NumberPad extends Component {
       phoneNumber: this.state.phoneNumber === ""
         ? String(digit)
         : this.state.phoneNumber + digit
+    });
+  }
+
+  //clear last character
+  handleDelete() {
+    this.setState({
+      phoneNumber: this.state.phoneNumber.substring(
+        0,
+        this.state.phoneNumber.length - 1
+      )
     });
   }
 
@@ -79,7 +90,7 @@ class NumberPad extends Component {
           <Button id="9" onClick={() => this.handleClick(9)}>
             9
           </Button>
-          <DeleteButton id="9">
+          <DeleteButton id="9" onClick={this.handleDelete}>
             <DeleteIcon />
           </DeleteButton>
           <Button id="0" onClick={() => this.handleClick(0)}>
