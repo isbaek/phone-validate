@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import "./stylesheets/phonenumberinput.css";
+
 // Input field
 class PhoneNumberInput extends Component {
   constructor(props) {
@@ -40,10 +42,12 @@ class PhoneNumberInput extends Component {
 
   render() {
     return (
-      <div>
+      <div className="input-box">
         <input
           type="text"
           className="num-input"
+          maxLength="15"
+          placeholder="Enter a number"
           value={this.props.value}
           onBlur={this.validate}
           onChange={this.change}

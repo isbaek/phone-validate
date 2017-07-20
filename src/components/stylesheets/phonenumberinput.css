@@ -1,0 +1,39 @@
+/* fonts from Google */
+@import url('https://fonts.googleapis.com/css?family=Hind');
+
+.input-box {
+  background-color: #553D7B;
+  margin: auto;
+  width: 390px;
+
+}
+
+.num-input {
+  margin-top: 20px;
+  padding: 5px;
+  width: 250px;
+  border: none;
+  /*border-bottom: 3px solid #7151A4;*/
+  background-color: #553D7B;
+  color: white;
+  font-size: 25px;
+  font-family: 'Hind', sans-serif;
+  color: white;
+  letter-spacing: 0.16em;
+  text-align: center;
+}
+
+.num-input::placeholder {
+  font-size: 25px;
+  font-family: 'Hind', sans-serif;
+  letter-spacing: 0;
+  color: #2F253E;
+}
+
+.num-input:focus {
+  outline: 0;
+}
+
+.error {
+
+}
